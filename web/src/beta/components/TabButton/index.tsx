@@ -7,21 +7,17 @@ import { styled } from "@reearth/services/theme";
 export type Props = {
   label: string;
   selected: boolean;
-  width?: string;
   onClick: () => void;
 };
 
-const TabButton: FC<Props> = ({ label, selected, onClick, width }) => {
-  const defaultWidth = "67px";
+const TabButton: FC<Props> = ({ label, selected, onClick }) => {
   return (
-    <StyledButton onClick={onClick} width={width ? width : defaultWidth}>
+    <StyledButton onClick={onClick}>
       <StyledText selected={selected}>{label}</StyledText>
     </StyledButton>
   );
 };
-const StyledButton = styled.button<{
-  width: string;
-}>`
+const StyledButton = styled.button`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -29,7 +25,6 @@ const StyledButton = styled.button<{
   gap: 10px;
 
   position: absolute;
-  width: ${({ width }) => width};
   height: 35px;
   left: 0px;
   top: 0px;
@@ -46,7 +41,6 @@ type TextProps = {
 };
 
 const StyledText = styled.text<TextProps>`
-  width: 100%;
   height: 19px;
 
   font-family: "Noto Sans";

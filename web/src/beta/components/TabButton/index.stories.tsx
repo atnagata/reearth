@@ -8,12 +8,6 @@ export default {
 } as Meta;
 
 export const Default = () => <TabButton label={"Editor"} onClick={() => {}} selected={true} />;
-export const Second = () => (
-  <TabButton label={"Story"} onClick={() => {}} selected={false} width={"62px"} />
-);
-export const Third = () => (
-  <TabButton label={"Widgets"} onClick={() => {}} selected={false} width={"82px"} />
-);
-export const Fourth = () => (
-  <TabButton label={"Preview"} onClick={() => {}} selected={false} width={"81px"} />
-);
+export const Second = () => <TabButton label={"Story"} onClick={() => {}} selected={false} />;
+export const Third = () => <TabButton label={"Widgets"} onClick={() => {}} selected={false} />;
+export const Fourth = () => <TabButton label={"Preview"} onClick={() => {}} selected={false} />;
