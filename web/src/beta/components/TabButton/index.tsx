@@ -7,13 +7,14 @@ import { styled } from "@reearth/services/theme";
 export type Props = {
   label: string;
   selected: boolean;
-  width: string;
+  width?: string;
   onClick: () => void;
 };
 
 const TabButton: FC<Props> = ({ label, selected, onClick, width }) => {
+  const defaultWidth = "67px";
   return (
-    <StyledButton onClick={onClick} width={width}>
+    <StyledButton onClick={onClick} width={width ? width : defaultWidth}>
       <StyledText selected={selected}>{label}</StyledText>
     </StyledButton>
   );

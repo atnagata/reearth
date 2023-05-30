@@ -7,9 +7,7 @@ export default {
   component: TabButton,
 } as Meta;
 
-export const Default = () => (
-  <TabButton label={"Editor"} onClick={() => {}} selected={true} width={"67px"} />
-);
+export const Default = () => <TabButton label={"Editor"} onClick={() => {}} selected={true} />;
 export const Second = () => (
   <TabButton label={"Story"} onClick={() => {}} selected={false} width={"62px"} />
 );
