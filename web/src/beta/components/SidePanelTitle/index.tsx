@@ -1,9 +1,7 @@
-// TabButton.tsx
 import type { FC } from "react";
 
 import { styled } from "@reearth/services/theme";
 
-// 以下のようなPropsでお願いします
 export type Props = {
   title: string;
   fontSize?: string | number;
