@@ -45,6 +45,13 @@ import Logout from "./Icons/logout.svg";
 import WorkspaceAdd from "./Icons/workspaceAdd.svg";
 import Workspaces from "./Icons/workspaces.svg";
 
+// Audio
+import MusicNotes from "./Icons/musicNotes.svg";
+import PlayRightFill from "./Icons/play-right-fill.svg";
+import Pause from "./Icons/pause.svg";
+import VolumeDown from "./Icons/volumeDown.svg";
+import VolumeUp from "./Icons/volumeUp.svg";
+
 export default {
   file: File,
   dl: InfoTable,
@@ -73,4 +80,9 @@ export default {
   logout: Logout,
   workspaceAdd: WorkspaceAdd,
   workspaces: Workspaces,
+  musicNotes: MusicNotes,
+  playRightFill: PlayRightFill,
+  pause: Pause,
+  volumeDown: VolumeDown,
+  volumeUp: VolumeUp,
 };
