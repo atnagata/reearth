@@ -19,7 +19,7 @@ export const Close: Story = {
 
 export const Open: Story = {
   args: {
-    label: "Editor",
+    label: "Preview",
     selected: true,
   },
 };

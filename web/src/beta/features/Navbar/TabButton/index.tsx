@@ -1,6 +1,7 @@
-import type { FC } from "react";
+import type React from "react";
 
-import { styled } from "@reearth/services/theme";
+import Text from "@reearth/beta/components/Text";
+import { styled, useTheme } from "@reearth/services/theme";
 
 export type Props = {
   label: string;
@@ -8,10 +9,17 @@ export type Props = {
   selected?: boolean;
 };
 
-const TabButton: FC<Props> = ({ label, onClick, selected }) => {
+const TabButton: React.FC<Props> = ({ label, onClick, selected }) => {
+  const theme = useTheme();
+
   return (
     <Button onClick={onClick} disabled={selected}>
-      {label}
+      <Text
+        size={"body"}
+        weight={"bold"}
+        color={selected ? theme.general.content.main : theme.general.content.weak}>
+        {label}
+      </Text>
     </Button>
   );
 };
@@ -21,26 +29,13 @@ type ButtonProps = {
 };
 
 const Button = styled.button<ButtonProps>`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
   padding: 8px 12px;
-  gap: 10px;
-  width: 67px;
   height: 35px;
   border-radius: 4px;
-  color: ${({ disabled, theme }) =>
-    disabled ? theme.general.content.main : theme.general.content.weak};
-  background: ${({ disabled, theme }) => (disabled ? theme.general.bg.weak : theme.navbar.bg)};
-  font-weight: 700;
-  font-size: 14px;
+  background: ${props => (props.disabled ? props.theme.general.bg.weak : "inherit")};
   line-height: 19px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   :hover {
-    background: ${({ theme }) => theme.general.bg.weak};
+    background: ${props => props.theme.general.bg.weak};
     transition: all 0.5s ease;
   }
 `;
