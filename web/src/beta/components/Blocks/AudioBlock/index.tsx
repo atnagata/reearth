@@ -1,9 +1,8 @@
-import { FC } from "react";
+import React from "react";
 
+import Icon from "@reearth/beta/components/Icon";
+import Text from "@reearth/beta/components/Text";
 import { styled } from "@reearth/services/theme";
-
-import Icon from "../../Icon";
-import Text from "../../Text";
 
 import useHooks from "./hooks";
 
@@ -26,7 +25,7 @@ const scrollBar = {
   },
 };
 
-const AudioBlock: FC<Props> = ({ loop, src }) => {
+const AudioBlock: React.FC<Props> = ({ loop, src }) => {
   const {
     onLoadedData,
     onTimeUpdate,
