@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Component>;
 export const Short: Story = {
   args: {
     loop: true,
-    src: "http://www.tam-music.com/mp3/tam-n18.mp3",
+    src: "https://bgmer.net/wp-content/uploads/2022/03/238_BPM128.mp3",
   },
   render: args => {
     return (
